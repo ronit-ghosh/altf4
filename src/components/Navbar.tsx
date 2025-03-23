@@ -57,14 +57,16 @@ export default function Navbar() {
                     />
                 </span>
                 {/* logo */}
-                <div className="w-22.5 hidden md:block">
-                    <Image
-                        src="https://res.cloudinary.com/drynqkitl/image/upload/v1742750210/logo_eik8we.png"
-                        alt="logo"
-                        width={1000}
-                        height={1000}
-                    />
-                </div>
+                <Link href="/">
+                    <div className="w-22.5 hidden md:block">
+                        <Image
+                            src="https://res.cloudinary.com/drynqkitl/image/upload/v1742750210/logo_eik8we.png"
+                            alt="logo"
+                            width={1000}
+                            height={1000}
+                        />
+                    </div>
+                </Link>
                 {/* nav items */}
                 <div className="md:flex gap-14 hidden">
                     {
