@@ -14,7 +14,8 @@ import {
 } from "@/components/ui/dialog"
 import { useState } from 'react'
 import { DialogTitle } from '@radix-ui/react-dialog'
-
+import Zoom from 'react-medium-image-zoom';
+import 'react-medium-image-zoom/dist/styles.css';
 
 export const works = [
   "https://res.cloudinary.com/drynqkitl/image/upload/v1742759535/blue-full_xbfxvq.webp",
@@ -38,15 +39,17 @@ export default function ProductImage() {
               className="object-cover"
             />
           </DialogTrigger>
-          <DialogContent className=''>
+          <DialogContent className='p-0 border-0 bg-transparent'>
             <DialogTitle />
-            <Image
-              src={works[currentImage]}
-              alt="merch"
-              width={5000}
-              height={5000}
-              className="object-cover"
-            />
+            <Zoom>
+              <Image
+                src={works[currentImage]}
+                alt="merch"
+                width={5000}
+                height={5000}
+                className="object-cover bg-background"
+              />
+            </Zoom>
           </DialogContent>
         </Dialog>
       </div>
